@@ -1,0 +1,37 @@
+packages: bin
+packages: fin
+packages: ral
+packages: vec
+
+packages: ral-lens
+packages: vec-lens
+
+packages: ral-optics
+packages: vec-optics
+
+packages: tests
+
+tests:      True
+benchmarks: True
+
+package dec
+  ghc-options: -Wall
+
+package fin
+  ghc-options: -Wall
+
+package vec
+  ghc-options: -Wall
+
+-- constraints: vec -distributive
+-- constraints: vec -semigroupoids
+-- constraints: vec -adjunctions
+
+-- constraints: ral -distributive
+-- constraints: ral -semigroupoids
+-- constraints: ral -adjunctions
+
+-- allow-newer: parallel-3.2.2.0:base
+allow-newer: cassava-0.5.2.0:base
+allow-newer: vector-th-unbox-0.2.1.7:base
+allow-newer: vector-th-unbox-0.2.1.7:template-haskell

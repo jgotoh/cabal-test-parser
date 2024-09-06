@@ -16,5 +16,5 @@ main = do
     exists <- doesFileExist projectConfigFp
     putStrLn ("Does project file exist? " ++ show exists ++ " Path: " ++ projectConfigFp)
     httpTransport <- configureTransport normal [] Nothing
-    runRebuild root (readProjectFileSkeleton minBound httpTransport dd "" "project")
+    runRebuild root (readProjectFileSkeleton normal httpTransport dd "" "project")
     putStrLn ("Parser passed: " ++ root)

@@ -45,7 +45,7 @@ checkProject httpTransport root = do
         projectConfigFp = distProjectFile dd ""
     exists <- doesFileExist projectConfigFp
     putStrLn ("Does project file exist? " ++ show exists ++ " Path: " ++ projectConfigFp)
-    result <- try (void (runRebuild root (readProjectFileSkeleton minBound httpTransport dd "" "project"))) :: IO (Either SomeException ())
+    result <- try (void (runRebuild root (readProjectFileSkeleton normal httpTransport dd "" "project"))) :: IO (Either SomeException ())
     case result of
         Right _ -> putStrLn ("Parser passed: " ++ root)
         Left ex -> putStrLn ("Parser failed: " ++ show ex)

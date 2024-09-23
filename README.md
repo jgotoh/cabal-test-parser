@@ -59,3 +59,10 @@ Example:
 ``` sh
 cabal run parse-project-file -- ~/snapshot-stackage/aeson
 ```
+
+
+## Download all cabal.project files from GitHub
+
+```sh
+GITHUB_TOKEN="your_github_token" ./dl-github-cabal-project-files.py
+```
